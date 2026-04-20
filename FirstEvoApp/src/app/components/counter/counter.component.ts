@@ -1,28 +1,19 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-counter',
-  template: `
-    <div class="counter">
-      <p>Счётчик: {{ count() }}</p>
-      <button (click)="decrement()">-</button>
-      <button (click)="increment()">+</button>
-    </div>
-  `,
-  styles: [`
-    .counter {
-      margin: 1rem 0;
-    }
-    button {
-      font-size: 1.2rem;
-      padding: 0.5rem 1rem;
-      margin: 0 0.25rem;
-      cursor: pointer;
-    }
-  `]
+  imports: [CommonModule],
+  templateUrl: './counter.component.html',
+  styleUrl: './counter.component.css'
 })
 export class CounterComponent {
   count = signal(0);
+  items = [
+  { name: 'Item 1', price: 100 },
+  { name: 'Item 2', price: 200 },
+  { name: 'Item 3', price: 300 }
+];
 
   increment() {
     this.count.update(v => v + 1);

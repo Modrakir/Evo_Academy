@@ -1,22 +1,18 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { DatePipe } from '@angular/common';
+import { AddFivePipe } from './add-five-pipe';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, CounterComponent],
-  template: `
-    <app-header></app-header>
-    <main>
-      <h1>{{ title() }}</h1>
-      <app-counter></app-counter>
-    </main>
-    <app-footer></app-footer>
-  `,
+  imports: [HeaderComponent, FooterComponent, CounterComponent, DatePipe, AddFivePipe],
+  templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   title = signal('Hello');
+  today = new Date();
 }

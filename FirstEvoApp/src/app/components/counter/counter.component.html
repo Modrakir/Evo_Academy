@@ -1,0 +1,8 @@
+<div class="counter">
+  <p>Счётчик: {{ count() }}</p>
+  <button (click)="decrement()">-</button>
+  <button (click)="increment()">+</button>
+  <ul>
+    <li *ngFor = 'let item of items'>{{item.name}} - {{item.price}}</li>
+  </ul>
+</div>
