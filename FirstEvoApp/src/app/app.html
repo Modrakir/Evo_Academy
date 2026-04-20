@@ -1,8 +1,7 @@
 <app-header></app-header>
 <main>
-    <h1>{{ title() }}</h1>
-    <app-counter></app-counter>
-    <p>{{today | date: 'dd/MM/yyyy'}}</p>
-    <p>{{10 | addFive }}</p>
+  <router-outlet></router-outlet>
+  <h1>{{ title() }}</h1>
+  <app-counter></app-counter>
 </main>
-    <app-footer></app-footer>
+<app-footer></app-footer>

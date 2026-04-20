@@ -3,6 +3,8 @@
   <button (click)="decrement()">-</button>
   <button (click)="increment()">+</button>
   <ul>
-    <li *ngFor = 'let item of items'>{{item.name}} - {{item.price}}</li>
+    <li *ngFor="let item of items">{{ item.name }} - {{ item.price }}</li>
   </ul>
+  <p>{{ today | date:'dd/MM/yyyy' }}</p>
+  <p>{{ 10 | addFive }}</p>
 </div>
