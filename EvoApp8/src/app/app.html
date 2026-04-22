@@ -1,0 +1,12 @@
+<div>
+  <button (click)="notifix_alert('warning')">Notification Warning!</button>
+  <button (click)="notifix_alert('success')">Notification Success</button>
+  <button (click)="notifix_alert('info')">Notification Info</button>
+</div>
+<div>
+    <ngx-charts-pie-chart
+      [results]="charts_data"
+      [view]="[600,600]"
+      [legend]="true"
+    ></ngx-charts-pie-chart>
+</div>
